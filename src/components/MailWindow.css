@@ -1,0 +1,31 @@
+.mail-background {
+  position: absolute;
+  width: 650px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid gray;
+  user-select: none;
+  z-index: 1;
+}
+
+.mail {
+  height: 100%;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-left: 20px;
+}
+
+.mail hr {
+  color: #565656;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.mail-background .top-bar {
+  border-top-left-radius: 12px;
+}

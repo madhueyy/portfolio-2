@@ -1,0 +1,27 @@
+.photos-background {
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  border: 1px solid gray;
+  user-select: none;
+  z-index: 1;
+}
+
+.photos {
+  width: 81%;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.photos-content {
+  height: 480px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  overflow-y: scroll;
+}

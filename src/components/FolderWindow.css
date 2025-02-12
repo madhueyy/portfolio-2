@@ -1,0 +1,100 @@
+.folder-background {
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  border: 1px solid gray;
+  user-select: none;
+  z-index: 1;
+}
+
+.sidebar {
+  width: 19%;
+  background-color: rgba(30, 30, 30, 0.7);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-right: 1px solid black;
+  backdrop-filter: blur(50px);
+  padding-left: 2px;
+}
+
+.main-folder {
+  width: 81%;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.top-bar {
+  height: 10%;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: grab;
+  border-top-right-radius: 12px;
+}
+
+.top-bar:active {
+  cursor: grabbing;
+}
+
+.side-top-part {
+  cursor: grab;
+}
+
+.side-top-part:active {
+  cursor: grabbing;
+}
+
+.sidebar img {
+  width: 16px;
+}
+
+p {
+  font-size: small;
+}
+
+.favourites-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name-background {
+  border-radius: 4px;
+  margin: 2px 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.item-name-clicked {
+  background-color: rgb(0, 68, 255);
+}
+
+.individual-image {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.folder-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 20px;
+}
+
+.image-background {
+  border-radius: 6px;
+  padding: 6px 6px;
+}
+
+.image-clicked {
+  background-color: rgba(89, 89, 89, 0.6);
+}
