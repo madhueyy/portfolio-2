@@ -6,7 +6,7 @@ function TopBar() {
     <div id="bar-background">
       <div id="left-bar">
         <div id="logo-part">
-          <img id="bar-apple-logo" src="../public/bar-apple-logo.png"></img>
+          <img id="bar-apple-logo" src="/bar-apple-logo.png"></img>
           <div className="button">Finder</div>
         </div>
 

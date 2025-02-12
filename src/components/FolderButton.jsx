@@ -5,7 +5,7 @@ function FolderButton({ folderName, isClicked, onDoubleClick, onClick }) {
   return (
     <div id="folder-background" onClick={onClick} onDoubleClick={onDoubleClick}>
       <div className={`icon-background ${isClicked && "icon-clicked"}`}>
-        <img id="folder-icon" src="../public/folder-icon.png"></img>
+        <img id="folder-icon" src="/folder-icon.png"></img>
       </div>
 
       <div className={`name-background ${isClicked && "name-clicked"}`}>
