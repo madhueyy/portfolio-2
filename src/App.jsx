@@ -40,12 +40,6 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // useEffect(() => {
-  //   if (showWelcomeScreen) {
-  //     setTimeout(() => setShowWelcomeScreen(false), 3000);
-  //   }
-  // }, [showWelcomeScreen]);
-
   if (isLoading) {
     return (
       <div className="loading-screen">
@@ -63,14 +57,6 @@ function App() {
       </div>
     );
   }
-
-  // if (showWelcomeScreen) {
-  //   return (
-  //     <div className="welcome-screen">
-  //       <h1 className="welcome-text">welcome</h1>
-  //     </div>
-  //   );
-  // }
 
   const folders = {
     languages: [
@@ -94,34 +80,56 @@ function App() {
     ],
     projects: [
       [
-        "Presto",
-        "/presto.png",
-        "green",
-        "https://presto-deploy-frontend-c64mv5wyo-madhus-projects-75aff4a4.vercel.app/",
-      ],
-      [
         "Botaniq",
         "/botaniq.png",
-        "yellow",
+        "green",
         "https://botaniq-seven.vercel.app/",
+        "Made with: TypeScript, React & Material UI.\n\nAn indoor plant shopping website. Allows users to browse, sort, and search a variety of plants. Implemented dynamic plant filtering by cateogires such as price, popularity, and reviews. Designed individual plant detail pages with a checkout flow, leveraging state management to handle selected items efficiently.",
       ],
       [
         "Fruit Focus",
         "/fruit-focus.png",
         "yellow",
         "https://fruit-focus-frontend.vercel.app/",
+        "Made with: TypeScript, React & Mantine UI.\n\nAn interactive website to help users identify seasonal fruits based on their geographic location within Australia. Implemented a search functionality that allows users to find specific fruits by name, nutrient content or seasonality. Integrated detailed fruit profiles displaying macro and micronutrient information.",
       ],
       [
         "Old Portfolio",
         "/old-portfolio.png",
         "yellow",
         "https://madhus-portfolio.vercel.app/",
+        "Made with: HTML, CSS, Bootstrap, JavaScript & GSAP.\n\nA portfolio website with smooth scrolling navigation with GSAP scroll-triggered animations. Note: website is not updated",
       ],
       [
         "Pomodoro Timer",
         "/pomodoro.png",
         "orange",
         "https://pomodoro-timer-eight-theta.vercel.app/",
+        "Made with: HTML, CSS & JavaScript.\n\nA user-friendly pomodoro timer to enhance productivity and time management using the Pomodoro study technique. Implemented features allowing users to start, stop and adjust the timer while setting daily productivity goals. Integrated a streak tracking system to encourage engagement by celebrating consecutive days of achieving daily goals.",
+      ],
+      [
+        "Botaniq GitHub",
+        "/github.webp",
+        "green",
+        "https://github.com/madhueyy/botaniq",
+      ],
+      [
+        "Fruit Focus GitHub",
+        "/github.webp",
+        "yellow",
+        "https://github.com/madhueyy/fruit-focus-frontend",
+      ],
+      [
+        "Portfolio GitHub",
+        "/github.webp",
+        "yellow",
+        "https://github.com/madhueyy/portfolio",
+      ],
+      [
+        "Pomodoro GitHub",
+        "/github.webp",
+        "orange",
+        "https://github.com/madhueyy/pomodoro-timer",
       ],
     ],
   };

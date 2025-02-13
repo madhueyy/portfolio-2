@@ -147,7 +147,13 @@ function FolderWindow({ folderName, folderItems, closeFolder }) {
               <IoIosArrowBack color="#BDBEC2" size={"22px"} />
               <IoIosArrowForward color="#BDBEC2" size={"22px"} />
             </div>
-            <h6 className="font-bold">{folderName}</h6>
+            {folderName == "projects" ? (
+              <h6 className="font-bold">
+                {folderName} - click on any image to be taken to website
+              </h6>
+            ) : (
+              <h6 className="font-bold">{folderName}</h6>
+            )}
           </div>
 
           <div className="ml-auto">
@@ -157,42 +163,50 @@ function FolderWindow({ folderName, folderItems, closeFolder }) {
 
         {/* Folder content */}
         <div className="folder-content">
-          {(folderItems || []).map(([name, imgSrc, colour, url], index) => (
-            <div
-              key={index}
-              className="individual-image"
-              onClick={() => setClickedItem(index)}
-            >
+          {(folderItems || []).map(
+            ([name, imgSrc, colour, url, info], index) => (
               <div
-                className={`image-background ${
-                  clickedItem === index && "image-clicked"
-                }`}
+                key={index}
+                className="individual-image"
+                onClick={() => setClickedItem(index)}
               >
-                {folderName === "projects" ? (
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    <div className="h-14 w-14 flex items-center border-[2px] border-white bg-stone-300 shadow-[inset_0px_0px_4px_rgba(0,0,0,0.2)] justify-center">
+                <div
+                  className={`image-background ${
+                    clickedItem === index && "image-clicked"
+                  }`}
+                >
+                  {folderName === "projects" ? (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      <div className="h-14 w-14 flex items-center border-[2px] border-white bg-stone-300 shadow-[inset_0px_0px_4px_rgba(0,0,0,0.2)] justify-center">
+                        <img src={imgSrc} alt={name} />
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="h-14 w-14 flex items-center justify-center">
                       <img src={imgSrc} alt={name} />
                     </div>
-                  </a>
-                ) : (
-                  <div className="h-14 w-14 flex items-center justify-center">
-                    <img src={imgSrc} alt={name} />
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
 
-              <div
-                className={`item-name-background ${
-                  clickedItem === index && "item-name-clicked"
-                }`}
-              >
-                <button
-                  className={`w-2.5 h-2.5 rounded-full cursor-auto ml-1 bg-${colour}-400`}
-                ></button>
-                <p>{name}</p>
+                <div
+                  className={`item-name-background ${
+                    clickedItem === index && "item-name-clicked"
+                  } ${
+                    folderName === "projects" &&
+                    !name.includes("GitHub") &&
+                    "projects-name"
+                  }`}
+                >
+                  <button
+                    className={`w-2.5 h-2.5 rounded-full cursor-auto ml-1 bg-${colour}-400`}
+                  ></button>
+                  <p>{name}</p>
+
+                  <div className="project-info">{info}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
 
         {folderName !== "projects" ? (
@@ -226,8 +240,9 @@ function FolderWindow({ folderName, folderItems, closeFolder }) {
               <button className="w-3 h-3 rounded-full bg-orange-400 cursor-auto mr-1"></button>
               Orange - non responsive (desktop only)
             </div>
+
             <h6 className="text-s font-bold mt-4 text-zinc-400">
-              Click on any project to be taken to website
+              * Hover over name to see tech stack & description
             </h6>
           </div>
         )}

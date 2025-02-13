@@ -6,7 +6,6 @@
   flex-direction: row;
   border-radius: 12px;
   border: 1px solid gray;
-  user-select: none;
   z-index: 1;
 }
 
@@ -33,6 +32,7 @@
 .notes-list {
   width: 38%;
   border-right: 1px solid black;
+  user-select: none;
 }
 
 .note-content {

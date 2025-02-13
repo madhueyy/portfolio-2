@@ -20,7 +20,7 @@ function NotesWindow({ closeNotes }) {
     ],
     [
       "Website App Guide 🧐",
-      "Launchpad - use this to see all the apps in a maximised view\nSafari - a website inside of a website 🪆\nMail - use this app to give any feedback you have for the website (bugs, good things, bad things, improvements etc.)\nPhotos - pictures of my dog 😆\nNotes - the app you’re on right now 🤩\nLinkedIn - takes you to my LinkedIn profile\nGitHub - takes you to my GitHub profile",
+      "Launchpad - use this to see all the apps in a maximised view\nSafari - click on any of the icons to see my projects' UI/UX designs I've made in Figma 👩‍🎨\nMail - use this app to give any feedback you have for the website (bugs, good things, bad things, improvements etc.)\nPhotos - pictures of my dog 😆\nNotes - the app you’re on right now 🤩\nLinkedIn - takes you to my LinkedIn profile\nGitHub - takes you to my GitHub profile",
     ],
   ];
 
@@ -94,7 +94,7 @@ function NotesWindow({ closeNotes }) {
 
               <div className="flex flex-row gap-x-5 ml-26">
                 <IoTrashOutline color="#BDBEC2" size={"22px"} />
-                <div class="vl"></div>
+                <div className="vl"></div>
                 <PiNotePencil color="#BDBEC2" size={"22px"} />
                 <IoText color="#BDBEC2" size={"20px"} />
               </div>

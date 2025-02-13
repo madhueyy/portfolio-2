@@ -8,7 +8,7 @@ import { TiTabsOutline } from "react-icons/ti";
 import "./SafariWindow.css";
 
 function SafariWindow({ closeSafari }) {
-  const [showIframe, setShowIframe] = useState(false);
+  const [selectedIframe, setSelectedIframe] = useState(null);
 
   const [position, setPosition] = useState({ x: 10, y: 40 });
   const [isDragging, setIsDragging] = useState(false);
@@ -59,16 +59,16 @@ function SafariWindow({ closeSafari }) {
           <IoIosArrowBack
             color="#BDBEC2"
             size={"21px"}
-            onClick={() => setShowIframe(false)}
+            onClick={() => setSelectedIframe(null)}
             className="cursor-pointer"
           />
           <IoIosArrowForward color="#BDBEC2" size={"21px"} />
         </div>
 
         <div className="flex items-center justify-center mx-auto w-120 h-7 bg-zinc-800/80 rounded">
-          {showIframe ? (
+          {selectedIframe ? (
             <div>
-              <p className="text-zinc-400">fruit-focus-frontend.vercel.app</p>
+              <p className="text-zinc-400">www.figma.com</p>
             </div>
           ) : (
             <div className="flex">
@@ -85,12 +85,13 @@ function SafariWindow({ closeSafari }) {
       </div>
 
       <div className="safari">
-        {showIframe ? (
+        {selectedIframe ? (
           <iframe
-            src="https://fruit-focus-frontend.vercel.app/"
+            src={selectedIframe}
+            allowFullScreen
             width="100%"
             height="100%"
-            title="Fruit Focus"
+            title="Figma"
           ></iframe>
         ) : (
           <div className="favourites">
@@ -100,19 +101,40 @@ function SafariWindow({ closeSafari }) {
                 <img src="/google.webp" className="w-28 h-28"></img>
                 <p>Google</p>
               </div>
+
               <div className="text-center">
                 <img src="/apple-safari.png" className="w-28 h-28"></img>
                 <p>Apple</p>
               </div>
+
               <div
                 className="fruit-focus-safari cursor-pointer"
-                onClick={() => setShowIframe(true)}
+                onClick={() =>
+                  setSelectedIframe(
+                    "https://embed.figma.com/design/jFadqUyKAE4zOSHPjEMbO5/DEVT2-Bard?node-id=109-105&embed-host=share"
+                  )
+                }
               >
                 <img
                   src="/fruit-focus-safari.png"
                   className="w-17.5 h-17.5 ml-6 mt-6 mb-5"
                 ></img>
-                <p>Fruit Focus</p>
+                <p>Fruit Focus Figma</p>
+              </div>
+
+              <div
+                className="botaniq-safari cursor-pointer"
+                onClick={() =>
+                  setSelectedIframe(
+                    "https://embed.figma.com/design/rjabGVHEFXXexPAFlE17iO/Botaniq?node-id=0-1&embed-host=share"
+                  )
+                }
+              >
+                <img
+                  src="/botaniq-safari.png"
+                  className="w-17.5 h-17.5 ml-3.5 mt-6 mb-5"
+                ></img>
+                <p>Botaniq Figma</p>
               </div>
             </div>
           </div>
