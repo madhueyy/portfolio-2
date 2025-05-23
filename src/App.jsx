@@ -80,11 +80,11 @@ function App() {
     ],
     projects: [
       [
-        "Botaniq",
-        "/botaniq.png",
+        "Planterior",
+        "/planterior.png",
         "green",
-        "https://botaniq-seven.vercel.app/",
-        "Made with: TypeScript, React & Material UI.\n\nAn indoor plant shopping website. Allows users to browse, sort, and search a variety of plants. Implemented dynamic plant filtering by cateogires such as price, popularity, and reviews. Designed individual plant detail pages with a checkout flow, leveraging state management to handle selected items efficiently.",
+        "https://planterior.vercel.app/",
+        "Made with: NextJS, React & Tailwind CSS.\n\nAn indoor plant shopping website. Allows users to browse, sort, and search a variety of plants. Implemented dynamic plant filtering by cateogires such as price, popularity, and reviews. Designed individual plant detail pages with a checkout flow, leveraging state management to handle selected items efficiently.",
       ],
       [
         "Fruit Focus",
@@ -106,30 +106,6 @@ function App() {
         "orange",
         "https://pomodoro-timer-eight-theta.vercel.app/",
         "Made with: HTML, CSS & JavaScript.\n\nA user-friendly pomodoro timer to enhance productivity and time management using the Pomodoro study technique. Implemented features allowing users to start, stop and adjust the timer while setting daily productivity goals. Integrated a streak tracking system to encourage engagement by celebrating consecutive days of achieving daily goals.",
-      ],
-      [
-        "Botaniq GitHub",
-        "/github.webp",
-        "green",
-        "https://github.com/madhueyy/botaniq",
-      ],
-      [
-        "Fruit Focus GitHub",
-        "/github.webp",
-        "yellow",
-        "https://github.com/madhueyy/fruit-focus-frontend",
-      ],
-      [
-        "Portfolio GitHub",
-        "/github.webp",
-        "yellow",
-        "https://github.com/madhueyy/portfolio",
-      ],
-      [
-        "Pomodoro GitHub",
-        "/github.webp",
-        "orange",
-        "https://github.com/madhueyy/pomodoro-timer",
       ],
     ],
   };

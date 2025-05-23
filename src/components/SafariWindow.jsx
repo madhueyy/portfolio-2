@@ -126,15 +126,15 @@ function SafariWindow({ closeSafari }) {
                 className="botaniq-safari cursor-pointer"
                 onClick={() =>
                   setSelectedIframe(
-                    "https://embed.figma.com/design/rjabGVHEFXXexPAFlE17iO/Botaniq?node-id=0-1&embed-host=share"
+                    "https://embed.figma.com/design/SUuqqbwXmjCK7WGqbdSnFe/Planterior?node-id=0-1&embed-host=share"
                   )
                 }
               >
                 <img
-                  src="/botaniq-safari.png"
+                  src="/planterior-icon.png"
                   className="w-17.5 h-17.5 ml-3.5 mt-6 mb-5"
                 ></img>
-                <p>Botaniq Figma</p>
+                <p>Planterior Figma</p>
               </div>
             </div>
           </div>

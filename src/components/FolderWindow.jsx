@@ -210,40 +210,36 @@ function FolderWindow({ folderName, folderItems, closeFolder }) {
         </div>
 
         {folderName !== "projects" ? (
-          <div className="mx-10 text-start mt-6">
+          <div className="flex flex-col mt-auto mb-8 mx-10 text-start mt-6">
             <h6 className="text-s font-bold">Key</h6>
             <div>
               <button className="w-3 h-3 rounded-full bg-green-400 cursor-auto mr-1"></button>
-              Green - high proficiency (multiple projects + uni courses)
+              Green - high proficiency
             </div>
             <div>
               <button className="w-3 h-3 rounded-full bg-yellow-400 cursor-auto mr-1"></button>
-              Yellow - medium proficiency (a few projects and uni course)
+              Yellow - medium proficiency
             </div>
             <div>
               <button className="w-3 h-3 rounded-full bg-orange-400 cursor-auto mr-1"></button>
-              Orange - low proficiency (one project and/or uni course)
+              Orange - low proficiency
             </div>
           </div>
         ) : (
-          <div className="mx-10 text-start mt-4">
+          <div className="flex flex-col mt-auto mb-8 mx-10 text-start mt-4">
             <h6 className="text-s font-bold">Key</h6>
             <div>
               <button className="w-3 h-3 rounded-full bg-green-400 cursor-auto mr-1"></button>
-              Green - finished + fully responsive
+              Green - fully responsive
             </div>
             <div>
               <button className="w-3 h-3 rounded-full bg-yellow-400 cursor-auto mr-1"></button>
-              Yellow - mostly responsive + still working on it
+              Yellow - mostly responsive
             </div>
             <div>
               <button className="w-3 h-3 rounded-full bg-orange-400 cursor-auto mr-1"></button>
               Orange - non responsive (desktop only)
             </div>
-
-            <h6 className="text-s font-bold mt-4 text-zinc-400">
-              * Hover over name to see tech stack & description
-            </h6>
           </div>
         )}
       </div>
