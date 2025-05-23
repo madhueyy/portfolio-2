@@ -103,7 +103,7 @@ function SafariWindow({ closeSafari }) {
               </div>
 
               <div className="text-center">
-                <img src="/apple-safari.png" className="w-28 h-28"></img>
+                <img src="/apple-safari.webp" className="w-28 h-28"></img>
                 <p>Apple</p>
               </div>
 
